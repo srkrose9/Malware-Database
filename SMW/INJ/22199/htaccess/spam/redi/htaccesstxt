@@ -1,0 +1,8 @@
+<FilesMatch ".(php|php5|phtml)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch "^(wp-login.php|themes.php|admin.php|settings.php|license.php)$">
+Order allow,deny
+Allow from all
+</FilesMatch>
