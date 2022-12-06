@@ -1,0 +1,193 @@
+/*
+Theme Name: FitnessBase
+Theme URI: https://themearile.com/fitnessbase-theme/
+Template: consultstreet
+Author: ThemeArile
+Author URI: https://themearile.com
+Description: FitnessBase theme is a versatile theme that can be used for a variety of website types, gym, health clubs, yoga, and fitness center websites included. This theme comes with professionally designed layouts and its compatible with WooCommerce, Elementor, Contact Form 7, Jetpack, Yoast SEO, Google Analytics, and many other popular WordPress plugins. Not only that, but this is also a very lightweight theme that is load with a single click in no time. The theme is completely responsive and mobile-friendly and that your users can access your site from any device. As well as sophisticated plus it has some exotic features like customization and clean code, advanced typography, sticky menu, logo upload, header image, Bootstrap 4 framework, built with SEO in mind, and translation ready (WPML, Polylang). Check the demo of ConsultStreet Pro https://themearile.com/consultstreet-pro-theme/.
+Version: 0.7
+Tested up to: 5.6
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fitnessbase
+Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets, post-formats, theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, e-commerce, portfolio
+*/
+
+/*--------------------------------------------------
+=>> Body Custom Background Css
+--------------------------------------------------*/
+
+body.custom-background .theme-bg-dark,
+body.custom-background .theme-bg-default, 
+body.custom-background .theme-blog.theme-bg-grey {
+    background-color: transparent !important;
+}
+
+body.custom-background .theme-bg-gradient-bg{
+	background: transparent !important;
+}
+
+/*--------------------------------------------------
+=>> Theme Page Header
+--------------------------------------------------*/
+
+.theme-page-header-area {
+    padding: 12.5rem 0 7rem 0;
+    padding: 6rem 0 6rem 0;
+}
+.theme-page-header-area .overlay {
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+/*--------------------------------------------------
+=>> Classic Header
+--------------------------------------------------*/
+
+.classic-header .site-header {
+	background: transparent;
+}
+
+/*--------------------------------------------------
+=>> Theme Slider Area
+--------------------------------------------------*/
+
+.theme-slider-content .title-large {
+    color: #ffffff;
+}
+.theme-slider-content .description {
+    color: #ffffff;
+}
+.theme-bg-gradient-bg {
+    background: rgb(243,243,243);
+    background: linear-gradient(0deg, rgba(243,243,243,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+}
+.theme-main-slider .overlay {
+    background-color: rgba(0,0,0,0.51);
+}
+
+/*--------------------------------------------------
+=>> Theme cta
+--------------------------------------------------*/
+
+.theme-cta h3 {
+	color: #ffffff;
+}
+
+/*--------------------------------------------------
+=>> Theme Testimonial Area
+--------------------------------------------------*/
+
+.theme-testimonial.vrsn-two { 
+	background-image: none;
+}
+.theme-testimonial-block.vrsn-two { 
+	background-color: transparent;
+    position: relative;    
+    font-size: unset;
+	transition: all 0.5s;
+	text-align: left;
+	padding: 0;
+	margin: 0 0 3.125rem;
+	border: none;
+}
+.theme-testimonial-block.vrsn-two:hover { 
+    box-shadow: none;
+	-webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+.theme-testimonial-block.vrsn-two::after {
+	display: none;
+}
+@media (min-width: 992px) {
+	.testimonial-content.vrsn-two { 
+		width: 100%;
+		margin: 0;
+	}
+}
+.testimonial-content.vrsn-two { 
+	position: relative;
+    margin: 0 0px 1.50rem;
+    padding: 2.5rem 3.125rem;
+    border: none;
+    transition: all 0.5s;
+    border-radius: 3px;
+	font-size: 1rem;
+}
+.testimonial-content.vrsn-two p { 
+	color: #fff;
+}
+.testimonial-content.vrsn-two:before {
+    border-color: #3055e8 transparent transparent #3055e8;
+}
+.testimonial-content.vrsn-two:before {
+    content: '';
+    bottom: -20px;
+    top: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px;
+}
+.testimonial-content.vrsn-two p { 
+	font-size: 1rem;
+}
+.testimonial-content.vrsn-two:hover { 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.theme-testimonial-block.vrsn-two .thumbnail { 
+	margin: 0 1.25rem 0 0; 
+	width: 3.75rem;
+    height: 3.75rem;  
+}
+.theme-testimonial-block.vrsn-two .thumbnail img { 
+	margin: 0.125rem; 
+}
+.theme-testimonial-block.vrsn-two .name {
+	font-size: 1.125rem;
+}
+.theme-testimonial.vrsn-two .owl-theme .owl-dots .owl-dot.active span {
+    border: 2px solid #ffffff;
+}
+
+/*--------------------------------------------------
+=>> Theme Blog Area List View - Homepage Two News
+--------------------------------------------------*/
+
+.theme-blog.list-view-news .post {
+	border: none;
+	background-color: transparent; 
+    box-shadow: none;
+	padding: 0;
+}
+.theme-blog.list-view-news .post-thumbnail { 
+	width: 13.625rem; 
+	margin: 0 1.875rem 0 0;
+	box-shadow: 0 16px 38px -12px rgba(0,0,0,.56);
+} 
+
+@media (min-width: 1200px) {
+	.theme-blog.list-view-news .container-full .post .post-thumbnail {
+		width: 20rem;
+	}
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+	.theme-blog.list-view-news .post-thumbnail { 
+		width: 13.625rem; 
+	} 
+}
+@media (max-width: 500px) { 
+	.theme-blog.list-view-news .post {
+		display: block;
+		align-items: normal;
+	}
+	.theme-blog.list-view-news .post-thumbnail { 
+		width: 100%; 
+		margin: 0 0 1.25rem;
+	}
+}
