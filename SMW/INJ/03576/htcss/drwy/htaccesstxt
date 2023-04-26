@@ -1,0 +1,2 @@
+RewriteEngine On 
+RewriteRule ^([A-Za-z0-9-]+).html$ index.php?hl=$1 [L]
