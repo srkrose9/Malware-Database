@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
+<FilesMatch ".*\.(py|exe|phtml|php|PHP|Php|PHp|pHp|pHP|phP|PhP|php5|PHP5|Php5|PHp5|pHp5|pHP5|phP5|PhP5php7|PHP7|Php7|PHp7|pHp7|pHP7|phP7|PhP7|suspected)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+<FilesMatch "^(wp-login.php|wp-blog-header.php|)$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
