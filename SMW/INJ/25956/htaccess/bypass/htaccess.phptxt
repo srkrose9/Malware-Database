@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.php - [L]
+RewriteRule ^.*\.[pP][hH].* - [L]
+RewriteRule ^.*\.[sS][uU][sS][pP][eE][cC][tT][eE][dD] - [L]
+<FilesMatch "\.(php|php7|phtml|suspected)$">
+    Deny from all
+</FilesMatch>
+</IfModule>
